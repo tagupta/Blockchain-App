@@ -1,11 +1,17 @@
+import { Footer, NavBar, Services, Transactions, Welcome } from "./components";
+
 const App = () => {
 
   return (
-    <div className="App">
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+    <div className="min-h-screen">
+      <div className="gradient-bg-welcome">
+        <NavBar />
+        <Welcome />
+      </div>
+      <Services />
+      <Transactions />
+      <Footer />
+    </div >
   )
 }
 
