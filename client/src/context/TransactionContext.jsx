@@ -26,8 +26,8 @@ export const TransactionProvider = ({ children }) => {
         message: ''
     })
 
-    const handleChange = (e, name) => {
-        setFormData((prevState) => ({ ...prevState, [name]: e.target.value }))
+    const handleChange = (e) => {
+        setFormData((prevState) => ({ ...prevState, [e.target.name]: e.target.value }))
     }
 
     const checkIfWalletIsConnected = async () => {
@@ -107,9 +107,9 @@ export const TransactionProvider = ({ children }) => {
             connectWallet,
             currentAccount,
             formData,
-            setFormData,
             handleChange,
-            sendTransaction
+            sendTransaction,
+            isLoading
         }}>
             {children}
         </TransactionContext.Provider>
